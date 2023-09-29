@@ -8,16 +8,15 @@ body{
     background-color: #222;
 }
 .top{
-    width: 90%;
-    max-width: 470px;
+    width: 100%;
+    max-width: 530px;
     background: linear-gradient(135deg,#00feba,#5b548a);
     color: #ffff;
-    margin : 100 px auto;
     border-radius: 20px;
-    padding: 40px 35px;
+    padding: 0;
     text-align: center;
     display: block;
-    margin: auto;
+    margin: 100px auto;
 }
 .search{
     width: 100%;
