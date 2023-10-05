@@ -53,13 +53,14 @@
         }
         else{
             var data = await response.json();
-            
+
         document.querySelector(".city").innerHTML=data.name;
         document.querySelector(".temp").innerHTML=Math.round(data.main.temp) +"°C";
         document.querySelector(".humidity1").innerHTML=data.main.humidity + "%";
         document.querySelector(".wind1").innerHTML=data.wind.speed + " kmph";
         if(data.weather[0].main == "Clouds"){
             weatherIcon.src = "images/clouds.png";
+            document.querySelector(".type").innerHTML="Clouds";
         }
         else if(data.weather[0].main == "Clear"){
             weatherIcon.src = "images/clear.png";
