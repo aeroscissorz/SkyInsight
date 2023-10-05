@@ -1,42 +1,4 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styles.css">
-    <title>Document</title>
-</head>
-<body>
-    <div class="top">
-        <div class="search">
-            <input style="width: 100%;" type="text" placeholder=" Type YOUR CITY NAME" spellcheck="false">
-            <button><img src="images/search.png" class="srch"></button>
-        </div>   
-        <div class="weather">
-            <img src="images/rain.png" class="weather-icon" alt="RAIN">
-            <h1 class="type">Rainy</h1>
-            <h2 class="temp">22°C</h2>
-            <h2 class="city">New York</h2>
-            <div class="details">
-                <div class="col">
-                    <img src="images/humidity.png" class="humidity" alt="HUMIDITY">
-                    <div>
-                        <p class="humidity1">50%</p>
-                        <p>Humidity</p>
-                    </div>
-                </div>
-                <div class="col">
-                    <img src="images/wind.png" class="wind" alt="WIND">
-                    <div>
-                        <p class="wind1">15 kmph</p>
-                        <p>Wind Speed</p>
-                    </div>
-                </div>
-            </div>
-        </div> 
-    </div>
-<script>
-    const apiKey="b46558eba2e6dcdc74b2c1461c627466";
+const apiKey="b46558eba2e6dcdc74b2c1461c627466";
     const apiUrl="https://api.openweathermap.org/data/2.5/weather?=&units=metric&q=";
     const searchBox =document.querySelector(".search input");
     const searchBtn =document.querySelector(".search button");
@@ -72,7 +34,7 @@
         }
         else if(data.weather[0].main == "Snow"){
             weatherIcon.src = "images/snow.png";
-            document.querySelector(".type").innerHTML="Clear";
+            document.querySelector(".type").innerHTML="Snow";
         }
         
 
@@ -82,8 +44,3 @@
     searchBtn.addEventListener("click",()=>{
         checkWeather(searchBox.value);
     })
-    
-</script>
-    
-</body>
-</html>
